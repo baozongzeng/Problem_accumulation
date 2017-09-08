@@ -1,0 +1,12 @@
+	2017-09-08  项目名称：直销(BSZX)
+	问题：iCheck插件在涉及到单选与全选逻辑判断时候？不能够直接在全选的时候用ifChecked和ifUnchecked事件，这样会影响全选中以后，点击单选宣布被取消选择。
+	&：$(document).on('ifClicked','#all', function(event)
+	{
+   		if(!$(this).prop("checked")){
+      			$(".condition-choose-detail input").iCheck("check");
+      			$(".condition-choose-detail>li.none input").iCheck("uncheck");
+   		}
+   		else{
+      			$(".condition-choose-detail input").iCheck("uncheck");
+   		}
+	});
